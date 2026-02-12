@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small resets + app wide */
+html, body, #__next { height: 100%; }
+
+/* CSS custom properties */
+:root {
+  --glass: rgba(255,255,255,0.6);
+  --glass-dark: rgba(10,10,10,0.6);
+}
+
+/* base styles you might want */
+@layer base {
+  body { @apply antialiased; }
+}
+
+/* components */
+@layer components {
+  .btn-primary { @apply inline-flex items-center px-5 py-3 rounded-lg font-medium shadow-sm; gap: 0.5rem; }
+  .btn-primary--filled { @apply bg-blue-600 text-white hover:bg-blue-700; }
+  .btn-primary--ghost { @apply border text-blue-600 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-neutral-800; }
+}

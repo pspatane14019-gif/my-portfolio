@@ -1,0 +1,4 @@
+This is a placeholder for your Resume PDF.
+Please replace this file ("C:\Users\Piyush\Documents\Piyush Patane CV.pdf") with your actual PDF file resume.
+1. Rename your PDF to "C:\Users\Piyush\Documents\Piyush Patane CV.pdf"
+2. Place it in the "public" folder of this project.
