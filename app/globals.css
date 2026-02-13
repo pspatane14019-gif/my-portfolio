@@ -5,14 +5,104 @@
   --color-cyan-450: #1ca7ec;
 }
 
-/* Custom Utilities for Premium Feel */
+/* Custom Utilities for Premium & Anime Feel */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-  
+
+  /* Microsoft Fluent "Mica/Acrylic" Style */
   .glass {
-    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-lg border border-white/20 dark:border-slate-800;
+    @apply bg-white/60 dark:bg-[#0f172a]/60 backdrop-blur-xl border border-white/30 dark:border-slate-700/50 shadow-lg;
+  }
+
+  /* Anime Glitch Effect */
+  .glitch {
+    position: relative;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 #00ffff;
+    clip: rect(24px, 550px, 90px, 0);
+    animation: glitch-anim-1 2.5s infinite linear alternate-reverse;
+  }
+
+  .glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 #ff00ff;
+    clip: rect(85px, 550px, 140px, 0);
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  }
+
+  .font-orbitron {
+    font-family: var(--font-orbitron);
+  }
+
+  .font-sans {
+    font-family: var(--font-outfit);
+  }
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(30px, 9999px, 10px, 0);
+  }
+
+  20% {
+    clip: rect(80px, 9999px, 90px, 0);
+  }
+
+  40% {
+    clip: rect(10px, 9999px, 50px, 0);
+  }
+
+  60% {
+    clip: rect(50px, 9999px, 20px, 0);
+  }
+
+  80% {
+    clip: rect(90px, 9999px, 70px, 0);
+  }
+
+  100% {
+    clip: rect(20px, 9999px, 40px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(10px, 9999px, 80px, 0);
+  }
+
+  20% {
+    clip: rect(60px, 9999px, 10px, 0);
+  }
+
+  40% {
+    clip: rect(90px, 9999px, 50px, 0);
+  }
+
+  60% {
+    clip: rect(20px, 9999px, 70px, 0);
+  }
+
+  80% {
+    clip: rect(40px, 9999px, 30px, 0);
+  }
+
+  100% {
+    clip: rect(70px, 9999px, 90px, 0);
   }
 }
 
@@ -33,12 +123,9 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   scroll-behavior: smooth;
 }
 

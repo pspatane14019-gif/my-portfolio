@@ -41,15 +41,15 @@ export default function Navbar() {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className="sticky top-0 z-50 bg-white/80 dark:bg-[#0f172a]/80 backdrop-blur-md border-b border-neutral-200 dark:border-slate-800"
+            className="sticky top-0 z-50 glass border-b-0"
         >
             <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
                 <a href="/" className="group flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md font-orbitron">
                         PP
                     </div>
                     <div className="flex flex-col">
-                        <span className="text-sm font-bold tracking-tight text-slate-800 dark:text-slate-100 group-hover:text-cyan-600 transition-colors">
+                        <span className="text-sm font-bold tracking-tight text-slate-800 dark:text-slate-100 group-hover:text-cyan-600 transition-colors font-orbitron">
                             Piyush Patane
                         </span>
                         <span className="text-[10px] uppercase tracking-wider text-slate-500 dark:text-slate-400">
@@ -73,6 +73,22 @@ export default function Navbar() {
                                 {id.charAt(0).toUpperCase() + id.slice(1)}
                             </a>
                         ))}
+                        <a
+                            href="https://alya-kujou-chatbot.streamlit.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 py-2 text-sm font-medium rounded-full text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all flex items-center gap-1"
+                        >
+                            Chatbot ↗
+                        </a>
+                        <a
+                            href="https://paws.sbchandra.info/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 py-2 text-sm font-medium rounded-full text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 hover:bg-slate-100 dark:hover:bg-slate-800/50 transition-all flex items-center gap-1"
+                        >
+                            PAWS ↗
+                        </a>
                     </div>
 
                     <div className="h-6 w-px bg-slate-200 dark:bg-slate-800 hidden md:block" />

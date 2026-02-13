@@ -54,15 +54,20 @@ export default function About() {
 
             <div className="mt-16 bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-8 flex flex-col md:flex-row gap-8 items-center">
                 <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                        Current Education & Goals
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4 font-orbitron">
+                        Creative & Technical Vision
                     </h3>
-                    <p className="text-slate-600 dark:text-slate-400 mb-4">
-                        I am currently pursuing a <strong>BSc in Data Science</strong> at ISM Germany. My academic focus combines rigorous statistical theory with practical application in business contexts.
-                    </p>
-                    <p className="text-slate-600 dark:text-slate-400">
-                        <strong>Goal:</strong> To join a forward-thinking team as an ML Engineer or Data Analyst, contributing to products that impact millions of users.
-                    </p>
+                    <div className="space-y-4 text-slate-600 dark:text-slate-400">
+                        <p>
+                            I combine analytical thinking with creative design. While I work with data and machine learning, I am equally passionate about visual storytelling and graphic design.
+                        </p>
+                        <p>
+                            I am particularly fascinated by motion dynamics and impact frames — the subtle but powerful visual elements that bring animations and interfaces to life.
+                        </p>
+                        <p>
+                            My goal is to build intelligent systems that are not only functional, but visually compelling and engaging.
+                        </p>
+                    </div>
                 </div>
                 <div className="w-full md:w-1/3">
                     <div className="bg-slate-100 dark:bg-slate-700/50 rounded-xl p-6">
